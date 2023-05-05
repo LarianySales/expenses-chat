@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    :root {
+      --creme: #F2E7DC;
+      --laranja: #F27E63;
+      --amadeirado: #591B0C;
+      --laranjaAvermelhado: #F26F63;
+      --ciano: #7ABFBF;
+      --branco: #FFFCF7;
+      --carvalho: #34251E;
+      --creme700: #cecbc3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--creme);
+    }
+
+    header {
+      margin-top: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      height: 98px;
+      width: 700px;
+      padding: 10px;
+
+
+      border-radius: 10px;
+      background-color: var(--laranja);
+
+    }
+
+    header img {
+      position: absolute;
+      /* foi um teste professor */
+      margin-top: 15px;
+      margin-left: 36em;
+    }
+
+    .title {
+      display: inline;
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 18px;
+      font-family: 'DM Sans';
+      font-weight: 400;
+      color: #FFF;
+
+    }
+
+    .saldo {
+      margin-top: 10px;
+      margin-left: 20px;
+      font-size: 20px;
+      font-family: 'DM Sans';
+      font-weight: 700;
+      color: #FFF;
+
+    }
+
+
+
+
+
+    main {
+      margin-top: 20px;
+      width: 700px;
+      background-color: var(--branco);
+      border-radius: 8px;
+    }
+
+    main h1 {
+      margin-top: 10px;
+      margin-left: 20px;
+
+      font-size: 30px;
+      font-family: 'DM Sans';
+      font-weight: 700;
+      color: var(--carvalho);
+
+    }
+
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      margin-left: 40px;
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 100px;
+      padding: 30px;
+
+      font-size: 18px;
+      font-family: 'DM Sans';
+      font-weight: 400;
+      color: #9e9b95;
+    }
+
+    .line {
+      display: flex;
+      margin-left: 67px;
+
+      width: 570px;
+      border: 0.5px solid #dbd2bf;
+
+    }
+
+    main h3 {
+      padding: 9px;
+      margin-top: 30px;
+      margin-left: 3em;
+
+      font-size: 18px;
+      font-family: 'DM Sans';
+      font-weight: 400;
+      color: #a8a6a1;
+
+    }
+
+    .ganho {
+      margin-left: 1.8em;
+      margin-bottom: 30px;
+      font-size: 35px;
+      font-family: 'DM Sans';
+      font-weight: 700;
+      color: var(--carvalho);
+    }
+
+    .faturou {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .acrescimo {
+      display: flex;
+      align-items: end;
+      justify-content: end;
+      margin-top: 4em;
+      margin-right: 60px;
+      font-size: 18px;
+      font-family: 'DM Sans';
+      font-weight: 700;
+      color: var(--carvalho);
+
+    }
+
+    .porcentagem h1 {
+      margin-right: 60px;
+      font-size: 18px;
+      font-family: 'DM Sans';
+      font-weight: 400;
+      color: var(--creme700);
+
+    }
+
+
+    footer {
+      
+      margin-top: 20px;
+      background-color: var(--branco);
+      width: 700px;
+      height: 80px;
+      border-radius: 10px;
+    }
+
+    footer a, p {
+      margin-top: 10px;
+      padding: 10px;
+
+      font-family: 'DM Sans';
+      font-weight: 400;
+      color: var(--creme700);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="title">My balance </h1>
+    <p class="saldo"> $921.48</p>
+    <img src="./expenses-chart-component-main/images/logo.svg" alt="logo" width="60px" height="60px">
+
+  </header>
+
+  <main>
+    <h1> Spending - Last 7 days</h1>
+
+    <ul>
+      <li>mon</li>
+      <li>tue</li>
+      <li>wed</li>
+      <li>thu</li>
+      <li>fri</li>
+      <li>sat</li>
+      <li>sun</li>
+    </ul>
+
+    <div class="line"></div>
+    <section class="faturou">
+      <article>
+        <h3> Total this month</h3>
+        <p class="ganho"> $478.33</p>
+      </article>
+
+      <article class="porcentagem">
+        <p class="acrescimo"> +2.4%</p>
+        <h1>from last month</h1>
+      </article>
+    </section>
+  </main>
+
+  <footer class="attribution">
+   <p> Challenge by</p> <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">big hero</a>.
+  </footer>
+</body>
+
+</html>
